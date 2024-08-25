@@ -10,6 +10,7 @@ import About from './components/About/About';
 import Contact from './components/Contact/Contact';
 import User from './components/User/User';
 import Item from './components/Item/Item';
+import Child from './components/Child/Child';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,11 +18,12 @@ const router = createBrowserRouter(
       <Route path='' element={<Home/>} />
       <Route path="about" element={<About/>}/>
       <Route path="contact" element={<Contact/>}/>
-      <Route path="user" element={<User/>}>
+      <Route path="user" element={<User rock="it's user's page"/>}>
         <Route path=':userid' element={<User/>}/>
       </Route>
       <Route path="Item" element={<Item/>}/>
       <Route path='*' element={<div>not found</div>}/>
+      <Route path='child' element={<Child kite="this is a kite page"/>}/>
     </Route>
   )
 )
